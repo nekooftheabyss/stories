@@ -33,8 +33,8 @@
         mt-24
         bg-white/40
         dark:bg-abyss-1000/40
-        lg:bg-transparent
-        dark:lg:bg-transparent
+        xl:bg-transparent
+        dark:xl:bg-transparent
       "
     >
       <slot />
