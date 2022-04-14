@@ -32,3 +32,8 @@
     </div>
   </div>
 </template>
+<script setup>
+definePageMeta({
+  title: 'Not Home - Neko Of The Abyss'
+})
+</script>

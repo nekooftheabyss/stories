@@ -1,22 +1,27 @@
 <template>
   <div class="p-8">
     <div class="text-lg">
-      <div class="
+      <div
+        class="
           flex
           md:flex-row md:space-x-12
           flex-col
           items-stretch
           md:justify-between
           justify-start
-        ">
+        "
+      >
         <div class="py-2 w-full">
-          <div class="
+          <div
+            class="
               p-2
               text-gray-700
               dark:text-white
-              font-extrabold text-xl
+              font-extrabold
+              text-xl
               border-nett-maid border-b-2
-            ">
+            "
+          >
             Lala
           </div>
           <p class="p-2">
@@ -43,7 +48,8 @@
                 hover:bg-zinc-700
                 text-white
               "
-            >Check out Lala on GitHub</a>
+              >Check out Lala on GitHub</a
+            >
           </div>
           <div class="mx-auto w-full max-w-md p-4">
             <NuxtLink
@@ -65,7 +71,8 @@
                 hover:bg-zinc-700
                 text-white
               "
-            >Check out the Discord bot, La Lala</NuxtLink>
+              >Check out the Discord bot, La Lala</NuxtLink
+            >
           </div>
           <div class="mx-auto w-full max-w-md p-4">
             <NuxtLink
@@ -87,7 +94,8 @@
                 hover:bg-zinc-700
                 text-white
               "
-            >Check out the web app, La Lala</NuxtLink>
+              >Check out the web app, La Lala</NuxtLink
+            >
           </div>
         </div>
       </div>
@@ -95,14 +103,10 @@
   </div>
 </template>
 
-<script>
-export default {
-  head() {
-    return {
-      title: 'Lala',
-      description:
-        'A collection of random useful (probably) javascript classes and functions.',
-    }
-  },
-}
+<script setup>
+definePageMeta({
+  title: "Lala",
+  description:
+    "A collection of random useful (probably) javascript classes and functions.",
+});
 </script>

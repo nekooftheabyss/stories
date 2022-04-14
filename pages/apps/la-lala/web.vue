@@ -87,7 +87,13 @@
     </div>
   </div>
 </template>
-
+<script setup>
+definePageMeta({
+  title: "Lala",
+  description:
+    "A collection of random useful (probably) javascript classes and functions.",
+});
+</script>
 <script>
 import articles from "@/data/Features";
 export default {

@@ -10,5 +10,6 @@
 <script>
 definePageMeta({
   layout: "erena",
+  title: "Pranev"
 });
 </script>

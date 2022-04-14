@@ -106,13 +106,10 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  head() {
-    return {
-      title: 'Queen Of Chaos',
-    }
-  },
-}
+<script setup>
+definePageMeta({
+  title: "Queen O' Chaos",
+  description:
+    "Anime battles with special abilities with unique traits! One bot to get memes, search anime/manga, get cute animals and get boorus! What's more, a cool anime/meme themed PvP game!",
+});
 </script>

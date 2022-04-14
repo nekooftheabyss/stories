@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         meta: [
           { name: 'viewport', content: 'width=device-width, initial-scale=1' },
           { name: 'theme-color', hid: 'theme-color', content: '#ff00c3'},
-          { name: 'description', hid: 'description', content: 'I make web apps and random libraries in JavaScript.'},
+          { name: 'description', hid: 'description', content: Constants.Description},
           { name: 'og:image', hid: 'og-image', content: '/icon.webp'},
           { name: 'og:thumbnail', hid: 'og-thumbnail', content: '/icon.webp'},
         ],
