@@ -1,3 +1,4 @@
 export default {
-    Name: "Pranev"
+    Name: "Neko Of The Abyss",
+    Description: "There is no description."
 }

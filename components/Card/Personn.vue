@@ -1,6 +1,6 @@
 <template>
   <div class="p-4">
-    <div class="max-w-md rounded-xl bg-gray-300/50 dark:bg-maid-bg/50 w-full p-4">
+    <div class="max-w-md rounded-xl bg-gray-300/50 dark:bg-abyss-1000/50 w-full p-4">
       <div class="flex flex-col items-stretch space-y-8">
         <div class="shrink-0 flex justify-center">
           <img

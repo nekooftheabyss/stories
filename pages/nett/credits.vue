@@ -7,3 +7,8 @@
         <div class = "p-2">Credits to the color <span class = "text-nett-maid">#ff00c3</span> for existing.</div>
     </div>
 </template>
+<script>
+definePageMeta({
+  layout: "erena",
+});
+</script>

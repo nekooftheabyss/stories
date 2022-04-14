@@ -6,3 +6,8 @@
     />
   </div>
 </template>
+<script>
+definePageMeta({
+  layout: "erena",
+});
+</script>

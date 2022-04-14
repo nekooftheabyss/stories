@@ -1,5 +1,5 @@
 <script>
-import Navigation from "@/data/Navigation";
+import Navigation from "@/data/EreNav";
 import Constants from "@/data/Constants";
 export default {
   props: {
@@ -51,15 +51,16 @@ export default {
 </script>
 <template>
   <div class="
-      bg-abyss-1000 dark:md:bg-abyss-1000/70
+      dark:bg-abyss-1100/30
+      bg-white/10
       shadow-md
       max-w-full
       block
-      w-full fixed
+      w-full
       top-0
       z-50
     ">
-    <div class="max-w-9xl mx-auto px-2 md:px-6 lg:px-8 md:mt-4">
+    <div class="max-w-7xl mx-auto px-2 md:px-6 lg:px-8 md:mt-4">
       <div class="relative flex items-center justify-between h-16">
         <div class="relative inset-y-0 left-0 flex items-center md:hidden">
           <button
@@ -127,7 +128,7 @@ export default {
               />
             </NuxtLink>
           </div>
-          <div :class="`overflow-y-scroll md:overflow-y-hidden z-40 block h-full top-0 left-0 bg-white dark:bg-abyss-1000 md:bg-transparent fixed md:static transform transition duration-500 ease-in-out md:translate-x-0 p-8 md:p-0 md:block ${
+          <div :class="`overflow-y-scroll md:overflow-y-hidden z-40 block h-full top-0 left-0 bg-white dark:bg-abyss-1100 md:bg-transparent fixed md:static transform transition duration-500 ease-in-out md:translate-x-0 p-8 md:p-0 md:block ${
               toggleNav ? 'translate-x-0' : '-translate-x-110 md:ml-6'
             }`">
  <!--           <NuxtLink to="/">
@@ -138,8 +139,8 @@ export default {
                   items-center
                   bg-black p-2
                   md:bg-white
-                  dark:bg-abyss-1000 border-nett-maid border-b
-                  md:dark:bg-abyss-1000 border-nett-maid border-b
+                  dark:bg-abyss-1100 border-nett-maid border-b
+                  md:dark:bg-abyss-1100 border-nett-maid border-b
                   shadow-md
                   top-0
                   left-0
@@ -169,9 +170,9 @@ export default {
                     :class="
                       (title === key
                         ? 'text-nett-maid '
-                        : 'text-white border-transparent ') +
+                        : 'text-black dark:text-white border-transparent ') +
                       (Array.isArray(route) ? 'group ' : '') +
-                      'transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md font-semibold hover:dark:text-nett-maid hover:text-zinc-800 block'
+                      'transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md hover:dark:text-nett-maid hover:text-zinc-800 block'
                     "
                   >
                     <span class="py-1">{{ name }}</span>
@@ -183,9 +184,9 @@ export default {
                     :class="
                       (title === key
                         ? 'text-nett-maid '
-                        : 'text-white') +
+                        : 'dark:text-white text-black ') +
                       (Array.isArray(route) ? 'group ' : '') +
-                      'transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md font-semibold hover:dark:text-nett-maid hover:text-zinc-800 block'
+                      'transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md hover:dark:text-nett-maid hover:text-zinc-800 block'
                     "
                   >
                     <span class="py-1">{{ name }}</span>
@@ -232,7 +233,7 @@ export default {
                         ? 'text-nett-maid '
                         : 'dark:text-white text-black ') +
                       (Array.isArray(route) ? 'group ' : '') +
-                      'transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md font-semibold hover:dark:text-nett-maid hover:text-zinc-800 block'
+                      'transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md hover:dark:text-nett-maid hover:text-zinc-800 block'
                     "
                   >
                     <span class="py-1">{{ name }}</span>

@@ -2,8 +2,7 @@
 <template>
   <footer
     class="
-      dark:bg-maid-bg/30
-      bg-white/10
+      bg-abyss-1000 text-white
       shadow-md
       text-center
       md:text-left
@@ -28,15 +27,15 @@
           <a
             href="https://github.com/retraigo"
             target="_blank"
-            class="font-bold"
+            class="font-bold text-nett-maid"
           >
             NeTT
           </a>
         </li>
       </div>
-      <div class="flex-initial mt-3 sm:mt-0">
+      <div class="flex-initial mt-3 sm:mt-0 text-nett-maid">
         <a
-          href="https://nekooftheabyss.xyz"
+          href="https://nekooftheabyss.moe"
           target="_blank"
           class="font-semibold"
         >

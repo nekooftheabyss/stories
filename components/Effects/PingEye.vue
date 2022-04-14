@@ -4,7 +4,7 @@
     :class="`inset-0 w-full fixed h-full z-50 block`"
   >
     <div class="hidden rotate-[360deg] -rotate-[360-deg]" />
-    <div :class="`inset-0 w-full fixed h-full z-70 block bg-maid-bg/80 blur-xl`" />
+    <div :class="`inset-0 w-full fixed h-full z-70 block bg-abyss-1000/80 blur-xl`" />
     <div :class="`flex flex-col items-center justify-center relative w-full h-full`">
       <div :class="`absolute z-90 w-48 h-48 bg-nett-maid/40 rounded-full animate-ping transition duration-500 ease-in-out transform`" />
       <img

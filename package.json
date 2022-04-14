@@ -8,6 +8,9 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.0.0",
-    "nuxt3": "^3.0.0-27478712.3238038"
+    "nuxt3": "^3.0.0-27497374.59593a0"
+  },
+  "dependencies": {
+    "@nekooftheabyss/lala": "^2.1.2"
   }
 }
