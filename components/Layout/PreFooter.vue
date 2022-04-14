@@ -31,7 +31,7 @@
           class="flex flex-row items-center stroke-nett-maid stroke-1 space-x-2"
         >
           <a
-            href="https://nekooftheabyss.xyz"
+            href="https://nekooftheabyss.moe"
             target="_blank"
             class="font-semibold flex flex-row items-center"
           >
