@@ -1,39 +1,47 @@
 <template>
   <div class="flex flex-col space-y-4 w-full">
     <div class="p-8">
-      <div class="text-4xl font-extrabold text-center">Thie is not home.</div>
+      <div class="text-4xl font-extrabold text-center">This is not home.</div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <CardChoice
-        title="La Lala"
-        description="Generates random text."
-        image="/lala.webp"
-        link="/apps/la-lala"
-      />
-      <CardChoice
-        title="Fortuna"
-        description="A TS module for emulating a gacha system."
-        image="/placeholder/1.png"
-        link="https://github.com/queenochaos/fortuna"
-      />
-      <CardChoice
-        title="Kuroneko"
-        description="A discord bot."
-        image="/queen/icon.png"
-        link="/apps/queenofchaos"
-      />
-      <CardChoice
-        title="Pranev"
-        description="The dude that owns Neko Of The Abyss."
-        image="/stuff/1.png"
-        link="/nett"
-      />
-      
+      <CardChoice v-for = "i in [0, 1, 2, 3]" :key = "titles[i]" :title="titles[i]" :description="descriptions[i]" :image="images[i]" :link="links[i]" />
+    </div>
+    <div class="p-8">
+      <div class="text-4xl font-extrabold text-center">Certainly.</div>
     </div>
   </div>
 </template>
 <script setup>
 definePageMeta({
-  title: 'Not Home - Neko Of The Abyss'
-})
+  title: "Not Home - Neko Of The Abyss",
+});
+function randomize(arr) {
+  let curr = arr.length;
+  let rand;
+  while (curr != 0) {
+    rand = Math.floor(Math.random() * curr);
+    curr--;
+    [arr[curr], arr[rand]] = [arr[rand], arr[curr]];
+  }
+  return arr;
+}
+const titles = randomize(["Pranev", "Kuroneko", "Fortuna", "La Lala"]);
+const descriptions = randomize([
+  "The dude that owns Neko Of The Abyss.",
+  "A discord bot.",
+  "A TS module for emulating a gacha system.",
+  "Generates random text.",
+]);
+const images = randomize([
+  "/stuff/1.png",
+  "/placeholder/1.png",
+  "/queen/icon.png",
+  "/lala.webp",
+]);
+const links = randomize([
+  "/apps/queenofchaos",
+  "/nett",
+  "https://github.com/queenochaos/fortuna",
+  "/apps/la-lala",
+]);
 </script>
