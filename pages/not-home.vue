@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col space-y-4 w-full">
     <div class="p-8">
-      <div class="text-4xl font-extrabold text-center">There are three routes ahead of you.</div>
+      <div class="text-4xl font-extrabold text-center">Thie is not home.</div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <CardChoice
