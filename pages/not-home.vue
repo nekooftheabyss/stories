@@ -4,7 +4,7 @@
       <div class="text-4xl font-extrabold text-center">This is not home.</div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <CardChoice v-for = "i in [0, 1, 2, 3]" :key = "titles[i]" :title="titles[i]" :description="descriptions[i]" :image="images[i]" :link="links[i]" />
+      <CardChoice v-for = "i in [0, 1, 2, 3, 4]" :key = "titles[i]" :title="titles[i]" :description="descriptions[i]" :image="images[i]" :link="links[i]" />
     </div>
     <div class="p-8">
       <div class="text-4xl font-extrabold text-center">Certainly.</div>
