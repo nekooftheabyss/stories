@@ -50,15 +50,19 @@ export default {
 };
 </script>
 <template>
-  <div class="
-      bg-abyss-1000 dark:md:bg-abyss-1000/70
+  <div
+    class="
+      bg-abyss-1000
+      dark:md:bg-abyss-1000/70
       shadow-md
       max-w-full
       block
-      w-full fixed
+      w-full
+      fixed
       top-0
       z-50
-    ">
+    "
+  >
     <div class="max-w-9xl mx-auto px-2 md:px-6 lg:px-8 md:mt-4">
       <div class="relative flex items-center justify-between h-16">
         <div class="relative inset-y-0 left-0 flex items-center md:hidden">
@@ -111,58 +115,60 @@ export default {
             </svg>
           </button>
         </div>
-        <div class="
+        <div
+          class="
             flex-1 flex
             fixed
             md:static
             items-center
             md:items-stretch md:justify-start
-          ">
+          "
+        >
           <div class="flex-shrink-0 flex items-center">
             <NuxtLink to="/">
               <img
-                class="h-8 w-auto hidden lg:block"
-                :src="`/icon.webp`"
+                class="h-8 w-auto hidden lg:block dark:lg:hidden"
+                :src="`/icons/neko_light.png`"
+                alt="Placeholder"
+              />
+              <img
+                class="h-8 w-auto hidden dark:lg:block"
+                :src="`/icons/neko_dark.png`"
                 alt="Placeholder"
               />
             </NuxtLink>
           </div>
-          <div :class="`overflow-y-scroll md:overflow-y-hidden z-40 block h-full top-0 left-0 bg-white dark:bg-abyss-1000 md:bg-transparent fixed md:static transform transition duration-500 ease-in-out md:translate-x-0 p-8 md:p-0 md:block ${
+          <div
+            :class="`overflow-y-scroll md:overflow-y-hidden z-40 block h-full top-0 left-0 bg-white dark:bg-abyss-1000 md:bg-transparent fixed md:static transform transition duration-500 ease-in-out md:translate-x-0 p-8 md:p-0 md:block ${
               toggleNav ? 'translate-x-0' : '-translate-x-110 md:ml-6'
-            }`">
- <!--           <NuxtLink to="/">
-              <div class="
-                  flex-shrink-0 flex
-                  block
-                  md:hidden
-                  items-center
-                  bg-black p-2
-                  md:bg-white
-                  dark:bg-abyss-1000 border-nett-maid border-b
-                  md:dark:bg-abyss-1000 border-nett-maid border-b
-                  shadow-md
-                  top-0
-                  left-0
-                  absolute
-                  w-full
-                  h-16
-                ">
-                <span class="text-white font-bold">{{ Constants.Name }}</span>
-              </div>
+            }`"
+          >
+            <NuxtLink to="/">
+              <img
+                class="h-8 w-auto block lg:hidden dark:hidden"
+                :src="`/neko_light.svg`"
+                alt="Placeholder"
+              />
+              <img
+                class="h-8 w-auto hidden lg:hidden dark:block"
+                :src="`/neko_dark.svg`"
+                alt="Placeholder"
+              />
             </NuxtLink>
--->
-            <div class="flex flex-col md:flex-row justify-between space-x-1 w-full">
-              <div class="
+
+            <div
+              class="flex flex-col md:flex-row justify-between space-x-1 w-full"
+            >
+              <div
+                class="
                   flex
                   md:space-x-4
                   flex-col
                   md:flex-row md:justify-between md:w-full md:pt-0
                   pt-10
-                ">
-                <div
-                  v-for="{ name, route, key } in Navigation"
-                  :key="key"
-                >
+                "
+              >
+                <div v-for="{ name, route, key } in Navigation" :key="key">
                   <NuxtLink
                     v-if="typeof route === 'string' && route.startsWith('/')"
                     :to="typeof route == 'string' ? route : '#'"
@@ -181,9 +187,7 @@ export default {
                     :href="'javascript:void(0)'"
                     @click="(x) => setState(key)"
                     :class="
-                      (title === key
-                        ? 'text-nett-maid '
-                        : 'text-white') +
+                      (title === key ? 'text-nett-maid ' : 'text-white') +
                       (Array.isArray(route) ? 'group ' : '') +
                       'transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md font-semibold hover:dark:text-nett-maid hover:text-zinc-800 block'
                     "
@@ -193,7 +197,8 @@ export default {
                       <SVGDown />
                     </span>
 
-                    <div :class="`
+                    <div
+                      :class="`
                         absolute
                         flex
                         bg-white
@@ -210,7 +215,8 @@ export default {
                         transition
                         duration-300
                         ease-in-out
-`">
+`"
+                    >
                       <NuxtLink
                         v-for="{ name2, route2, key2 } in route"
                         :key="key2"
@@ -221,12 +227,14 @@ export default {
                           hover:bg-zinc-100 hover:text-black
                         "
                         :to="route2"
-                      >{{ name2 }}</NuxtLink>
+                        >{{ name2 }}</NuxtLink
+                      >
                     </div>
                   </a>
                   <a
                     v-else
-                    :href="typeof route == 'string' ? route : '#'" target="_blank"
+                    :href="typeof route == 'string' ? route : '#'"
+                    target="_blank"
                     :class="
                       (title === key
                         ? 'text-nett-maid '
@@ -243,14 +251,12 @@ export default {
           </div>
           <div
             :class="`inset-0 w-full fixed h-full z-30 block ${
-              toggleNav || anyState()
-                ? 'visible'
-                : 'invisible'
+              toggleNav || anyState() ? 'visible' : 'invisible'
             }`"
             @click="
               (x) => {
-                toggleOff()
-                resetState()
+                toggleOff();
+                resetState();
               }
             "
           ></div>

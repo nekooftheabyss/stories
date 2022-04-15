@@ -122,8 +122,13 @@ export default {
           <div class="flex-shrink-0 flex items-center">
             <NuxtLink to="/">
               <img
-                class="h-8 w-auto hidden lg:block"
-                :src="`/icon.webp`"
+                class="h-8 w-auto hidden lg:block dark:lg:hidden"
+                :src="`/neko_light.svg`"
+                alt="Placeholder"
+              />
+              <img
+                class="h-8 w-auto hidden dark:lg:block"
+                :src="`/neko_dark.svg`"
                 alt="Placeholder"
               />
             </NuxtLink>
@@ -131,27 +136,18 @@ export default {
           <div :class="`overflow-y-scroll md:overflow-y-hidden z-40 block h-full top-0 left-0 bg-white dark:bg-abyss-1100 md:bg-transparent fixed md:static transform transition duration-500 ease-in-out md:translate-x-0 p-8 md:p-0 md:block ${
               toggleNav ? 'translate-x-0' : '-translate-x-110 md:ml-6'
             }`">
- <!--           <NuxtLink to="/">
-              <div class="
-                  flex-shrink-0 flex
-                  block
-                  md:hidden
-                  items-center
-                  bg-black p-2
-                  md:bg-white
-                  dark:bg-abyss-1100 border-nett-maid border-b
-                  md:dark:bg-abyss-1100 border-nett-maid border-b
-                  shadow-md
-                  top-0
-                  left-0
-                  absolute
-                  w-full
-                  h-16
-                ">
-                <span class="text-white font-bold">{{ Constants.Name }}</span>
-              </div>
+            <NuxtLink to="/">
+              <img
+                class="h-8 w-auto block lg:hidden dark:hidden"
+                :src="`/neko_light.svg`"
+                alt="Placeholder"
+              />
+              <img
+                class="h-8 w-auto hidden lg:hidden dark:block"
+                :src="`/neko_dark.svg`"
+                alt="Placeholder"
+              />
             </NuxtLink>
--->
             <div class="flex flex-col md:flex-row justify-between space-x-1 w-full">
               <div class="
                   flex
