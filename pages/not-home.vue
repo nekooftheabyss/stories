@@ -13,7 +13,7 @@
 </template>
 <script setup>
 definePageMeta({
-  title: "Not Home - Neko Of The Abyss",
+  title: "Not Home",
 });
 function randomize(arr) {
   let curr = arr.length;
