@@ -4,7 +4,7 @@ import Constants from './data/Constants.js'
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
     meta: {
-        title: Constants.Name,
+        titleTemplate: `%s - ${Constants.Name}`,
         meta: [
           { name: 'viewport', content: 'width=device-width, initial-scale=1' },
           { name: 'theme-color', hid: 'theme-color', content: '#ff00c3'},

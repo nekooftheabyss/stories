@@ -4,6 +4,7 @@
       name="Pranev"
       title="Open-Source Supremacist"
       description="I make web apps and random libraries in JavaScript."
+      image="/nett.png"
     />
   </div>
 </template>

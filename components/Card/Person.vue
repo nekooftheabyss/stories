@@ -4,7 +4,7 @@
       <div class="flex flex-col items-stretch space-y-8">
         <div class="shrink-0 flex justify-center">
           <img
-            src="/icon.webp"
+            :src="image"
             class="object-cover rounded-full w-48 h-48"
           />
         </div>
@@ -30,6 +30,10 @@ export default {
       default: null,
     },
     description: {
+      type: String,
+      default: null,
+    },
+    image: {
       type: String,
       default: null,
     },

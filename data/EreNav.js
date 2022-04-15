@@ -11,8 +11,8 @@ export default [
     },
     {
       name: `My Code`,
-      route: `/nett/code`,
-      key: `github`,
+      route: `/`,
+      key: `main`,
     },
     {
       name: `My Tweets`,

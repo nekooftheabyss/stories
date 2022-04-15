@@ -25,16 +25,18 @@ function randomize(arr) {
   }
   return arr;
 }
-const titles = randomize(["Pranev", "Kuroneko", "Fortuna", "La Lala"]);
+const titles = randomize(["Pranev", "Kuroneko", "Fortuna", "La Lala", "Duration"]);
 const descriptions = randomize([
   "The dude that owns Neko Of The Abyss.",
   "A discord bot.",
   "A TS module for emulating a gacha system.",
+  "Get the formated time duration. ES Module that works in Node, Deno and browsers.",
   "Generates random text.",
 ]);
 const images = randomize([
-  "/stuff/1.png",
+  "/nett.png",
   "/placeholder/1.png",
+  "/placeholder/3.png",
   "/queen/icon.png",
   "/lala.webp",
 ]);
@@ -43,5 +45,6 @@ const links = randomize([
   "/nett",
   "https://github.com/queenochaos/fortuna",
   "/apps/la-lala",
+  "https://github.com/retraigo/duration.js",
 ]);
 </script>

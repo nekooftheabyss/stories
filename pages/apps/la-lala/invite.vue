@@ -14,7 +14,7 @@ export default {
   mounted() {
     setTimeout(function () {
       window.location.href =
-        'https://discord.com/api/oauth2/authorize?client_id=679741957047582725&permissions=274878228544&scope=bot%20applications.commands'
+        'https://discord.com/api/oauth2/authorize?client_id=937353840490070057&permissions=2048&scope=bot%20applications.commands'
     }, 3000)
   },
 }
