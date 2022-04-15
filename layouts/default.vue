@@ -54,23 +54,19 @@
   background-size: contain;
 }
 </style> 
-<script>
-export default {
-  data() {
-    return {
-      nuxtApp: useNuxtApp(),
-    };
-  },
-  methods: {
-    windowWidth(x) {
-      return (document.body.scrollWidth * x) / 100;
-    },
-    windowHeight(x) {
-      return (document.body.scrollHeight * x) / 100;
-    },
-    distance(x1, y1, x2, y2) {
-      return Math.sqrt(Math.abs((x2 - x1) ** 2) - Math.abs((y2 - y1) ** 2));
-    },
-  },
-};
+<script setup>
+const nuxtApp = useNuxtApp();
+const route = useRoute();
+
+useHead({ title: route.meta.title, description: route.meta.description });
+
+function windowWidth(x) {
+  return (document.body.scrollWidth * x) / 100;
+}
+function windowHeight(x) {
+  return (document.body.scrollHeight * x) / 100;
+}
+function distance(x1, y1, x2, y2) {
+  return Math.sqrt(Math.abs((x2 - x1) ** 2) - Math.abs((y2 - y1) ** 2));
+}
 </script>
