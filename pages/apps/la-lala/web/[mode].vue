@@ -161,6 +161,12 @@ import articles from "@/data/Features";
 const route = useRoute();
 const nuxtApp = useNuxtApp()
 
+definePageMeta({
+  title: "Lala",
+  description:
+    "A collection of random useful (probably) javascript classes and functions.",
+});
+
 const mode = route.params.mode;
 const article = articles.find((x) => x.name === mode);
 if (!article) nuxtApp.$router.push("/");
