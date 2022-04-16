@@ -62,8 +62,8 @@
                   /> </div>
               </div>
               <div class="flex flex-col items-start justify-start">
-                <div :class="`p-3 ${['string', 'name', 'character', 'fantasy-name'].includes(article.name) ? 'break-all' : ''}`">
-                  {{result ? `Your Result: ${["name", "character", "fantasy-name"].includes(article.name) ? result.split(" ").map(s => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()).join(" ") : result}` : ``}}
+                <div :class="`p-3 ${['string', 'name'].includes(article.name) ? 'break-all' : ''}`">
+                 Your Result:  <span class = "font-bold">{{result ? `${["name", "character", "fantasy-name"].includes(article.name) ? result.split(" ").map(s => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()).join(" ") : result}` : `Nothing. Just like your life.`}}</span>
                 </div>
                 <button
                   class="p-4 bg-zinc-600 text-white rounded-lg transition duration-500 ease-in-out transform hover:translate-y-1"

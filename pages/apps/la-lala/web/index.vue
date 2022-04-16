@@ -33,22 +33,21 @@
               md:space-y-0 md:space-x-4
             "
           >
-            <ul class="flex flex-col items-start w-full px-2 space-y-4">
+            <ul class="flex flex-col items-start w-full px-2 space-y-4 order-2 md:order-1">
               <li
                 v-for="article in articles"
                 :key="article.name.toLowerCase()"
                 class="p-2 w-full"
               >
-                <a
-                  href="javascript:void(0)"
-                  @click="(x) => setEnabled(article.name.toLowerCase())"
+                <NuxtLink
+                  :to="`/apps/la-lala/web/${article.name.toLowerCase()}`"
                   class="
                     p-2
                     max-w-6xl
                     md:max-w-md
                     w-full
                     block
-                    bg-nett-matchpurple
+                    bg-abyss-1100
                     text-nett-maid
                     font-semibold
                     text-center
@@ -62,13 +61,9 @@
                       )
                       .join(" ")
                   }}
-                </a>
+                </NuxtLink>
               </li>
             </ul>
-            <div class="py-2 w-full h-full">
-              <PageTrial v-if="enabled" :modez="modez" />
-              <PageWaste v-else />
-            </div>
           </div>
           <div class="p-4">
             Lala is a collection of random useful (probably) javascript classes
