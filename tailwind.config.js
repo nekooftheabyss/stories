@@ -1,5 +1,5 @@
 export default {
-  darkMode: "media", // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   safelist: [
     {
       pattern: /(bg|stroke|fill)-maid-(100|200|300|400|500|600|border)/,

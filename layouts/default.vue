@@ -1,6 +1,6 @@
 <template>
   <div
-    class="
+    class="dark
       flex flex-col
       min-h-screen
       font-montserrat

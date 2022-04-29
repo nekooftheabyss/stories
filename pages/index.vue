@@ -21,7 +21,7 @@
       <CardChoice
         title="Kuroneko"
         description="A discord bot."
-        image="/queen/icon.png"
+        image="/icons/neko_dark.png"
         link="/apps/queenofchaos"
       />
       <CardChoice

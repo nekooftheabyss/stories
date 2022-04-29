@@ -37,7 +37,7 @@ const images = randomize([
   "/nett.png",
   "/placeholder/1.png",
   "/placeholder/3.png",
-  "/queen/icon.png",
+  "/icons/neko_dark.png",
   "/lala.webp",
 ]);
 const links = randomize([
