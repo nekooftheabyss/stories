@@ -1,6 +1,6 @@
 <template>
   <div
-    class="dark
+    class="
       flex flex-col
       min-h-screen
       font-montserrat
@@ -32,7 +32,7 @@
         py-4
         mt-24
         bg-white/40
-        dark:bg-abyss-1000/40
+        dark:bg-abyss-1000/80
         xl:bg-transparent
         dark:xl:bg-transparent
       "

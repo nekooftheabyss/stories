@@ -9,4 +9,9 @@ export default [
     route: `/not-home`,
     key: `not-home`,
   },
+  {
+    name: `Postulates of the Abyss`,
+    route: `/postulates`,
+    key: `postulates`,
+  },
 ];
