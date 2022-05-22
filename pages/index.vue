@@ -21,7 +21,7 @@
       <CardChoice
         title="Kuroneko"
         description="A discord bot."
-        image="/icons/neko_dark.png"
+        image="/queen/icon.png"
         link="/apps/queenofchaos"
       />
       <CardChoice
@@ -41,6 +41,6 @@
 </template>
 <script setup>
 definePageMeta({
-  title: "Home - Neko Of The Abyss",
+  title: "Home",
 });
 </script>

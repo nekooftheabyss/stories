@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     css: ['@/assets/transition.css'],
     modules: [
         '@nuxtjs/tailwindcss',
+        '@pinia/nuxt',
     ]
 //    loading: '@/components/Effects/PingEye.vue'
 

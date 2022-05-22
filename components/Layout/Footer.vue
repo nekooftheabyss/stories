@@ -1,14 +1,7 @@
 
 <template>
-  <footer
-    class="
-      bg-abyss-1000 text-white
-      shadow-md
-      text-center
-      md:text-left
-    "
-  >
-    <ul
+  <footer class="bg-abyss-1000 text-white shadow-md text-center md:text-left">
+    <div
       class="
         sm:flex
         items-center
@@ -22,7 +15,7 @@
       "
     >
       <div class="flex-1">
-        <li>
+        <span>
           Copyright
           <a
             href="https://github.com/retraigo"
@@ -31,7 +24,23 @@
           >
             NeTT
           </a>
-        </li>
+        </span>
+        <div
+          class="
+            font-bold
+            flex flex-row
+            items-center
+            fill-transparent
+            stroke-white stroke-2
+            cursor-pointer
+            space-x-4
+          "
+          @click="mainConfig.switch()"
+        >
+          <span>Make It {{ isDark ? "Bright" : "Dark" }}</span>
+          <SVGSun v-if="isDark" />
+          <SVGMoon v-else />
+        </div>
       </div>
       <div class="flex-initial mt-3 sm:mt-0 text-nett-maid">
         <a
@@ -42,11 +51,16 @@
           Neko of the Abyss
         </a>
       </div>
-    </ul>
+    </div>
   </footer>
 </template>
 
-  <script>
-export default {};
+
+
+<script setup>
+import { useMainConfig } from "@/store/mainconfig.js";
+
+const mainConfig = useMainConfig();
+
+let isDark = computed(() => mainConfig.darkMode);
 </script>
-  

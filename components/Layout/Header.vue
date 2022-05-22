@@ -128,12 +128,12 @@ export default {
             <NuxtLink to="/">
               <img
                 class="h-8 w-auto hidden lg:block dark:lg:hidden"
-                :src="`/icons/neko_light.png`"
+                :src="`/icons/64x64.webp`"
                 alt="Placeholder"
               />
               <img
                 class="h-8 w-auto hidden dark:lg:block"
-                :src="`/icons/neko_dark.png`"
+                :src="`/icons/64x64.webp`"
                 alt="Placeholder"
               />
             </NuxtLink>

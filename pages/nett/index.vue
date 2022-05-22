@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col items-center space-y-72">
-    <div class="flex flex-col items-center mt-72">
+    <div class="flex flex-col items-center mt-36">
       <CardPerson
-        name="Pranev"
+        name="Pranev (NeTT)"
         title="Open-Source Supremacist"
-        description="I make web apps and random libraries in JavaScript."
+        description="I make web apps and random libraries in JavaScript / Typescript."
         image="/nett.png"
       />
     </div>
@@ -12,8 +12,9 @@
       <CardPlain
         title="About Me"
         :description="[
-          `I'm a college student who makes random JavaScript programs in my free time. I usually make websites and web apps using Vue and Nuxt.`,
-          `Started programming like back in 2020 when I had nothing better to do. Eventually came to be known by different names here and there, commonly as NeTT in internet communities.`,
+          `I'm Pranev, aka NeTT, a college student who makes random JavaScript programs in my free time. I usually make websites and web apps using Vue and Nuxt.`,
+          `Started programming like back in 2020 when I had nothing better to do. Ended up getting quite into it.`, 
+          `Eventually came to be known by different names here and there, commonly as NeTT in internet communities.`,
         ]"
       />
     </div>

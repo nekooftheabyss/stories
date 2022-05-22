@@ -71,7 +71,7 @@
                 hover:bg-zinc-700
                 text-white
               "
-              >Check out the Discord bot, La Lala</NuxtLink
+              >Check out the Discord bot, La Lala (discontinued)</NuxtLink
             >
           </div>
           <div class="mx-auto w-full max-w-md p-4">

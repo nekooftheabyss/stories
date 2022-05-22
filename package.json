@@ -11,6 +11,9 @@
     "nuxt3": "^3.0.0-27497374.59593a0"
   },
   "dependencies": {
-    "@nekooftheabyss/lala": "^2.1.2"
+    "@nekooftheabyss/lala": "^2.1.2",
+    "@pinia/nuxt": "^0.1.9",
+    "@vueuse/core": "^8.5.0",
+    "pinia": "^2.0.14"
   }
 }

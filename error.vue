@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="`${isDark ? 'dark' : ''}`">
     <NuxtLayout>
       <div class="flex flex-col items-center">
         <CardPlain
@@ -10,10 +10,10 @@
     </NuxtLayout>
   </div>
 </template>
-<script>
-export default {
-  mounted() {
-    console.log("ERR")
-  }
-}
+<script setup>
+import { useMainConfig } from "@/store/mainconfig.js";
+
+const mainConfig = useMainConfig();
+
+let isDark = computed(() => mainConfig.darkMode);
 </script>
