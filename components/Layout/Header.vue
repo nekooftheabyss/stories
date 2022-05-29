@@ -145,13 +145,8 @@ export default {
           >
             <NuxtLink to="/">
               <img
-                class="h-8 w-auto block lg:hidden dark:hidden dark:lg:hidden"
-                :src="`/neko_light.svg`"
-                alt="Placeholder"
-              />
-              <img
-                class="h-8 w-auto hidden lg:hidden dark:block dark:lg:hidden"
-                :src="`/neko_dark.svg`"
+                class="h-8 w-auto block lg:hidden"
+                :src="`/icons/64x64.webp`"
                 alt="Placeholder"
               />
             </NuxtLink>

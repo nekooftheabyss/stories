@@ -9,12 +9,12 @@
         max-w-6xl
         mx-auto
         py-4
-        px-4
+        px-4 space-y-4 md:space-y-0 md:space-x-4
         md:px-8
         text-sm
       "
     >
-      <div class="flex-1">
+      <div class="flex-1 space-y-4 md:space-y-0 md:space-x-4">
         <span>
           Copyright
           <a
@@ -30,7 +30,7 @@
             font-bold
             flex flex-row
             items-center
-            fill-transparent
+            fill-transparent flex justify-center
             stroke-white stroke-2
             cursor-pointer
             space-x-4
