@@ -7,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {
+      spacing: {
+        '102': '32rem',
+        '108': '36rem',
+      },
       maxWidth: {
         "8xl": "90rem",
         "9xl": "100rem",
@@ -42,7 +46,7 @@ export default {
           800: "#2e004d",
           900: "#1f0033",
           1000: "#0f001a",
-          1100: "#030005"
+          1100: "#030005",
         },
         nett: {
           kuro: "#944dff",
@@ -78,5 +82,7 @@ export default {
       auto: "auto",
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/typography"),
+  ],
 };

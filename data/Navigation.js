@@ -14,4 +14,9 @@ export default [
     route: `/postulates`,
     key: `postulates`,
   },
+  {
+    name: `Blog`,
+    route: `/blog`,
+    key: `blog`,
+  },
 ];

@@ -1,44 +1,30 @@
 
 <template>
-  <div class="p-8">
-    <div class="text-lg">
+  <div class="p-8 w-full">
+    <div class="text-lg text-center">
       <div
         class="
           flex
           md:flex-row md:space-x-12
           flex-col
-          items-stretch
+          items-center
           md:justify-between
           justify-start
         "
       >
         <div class="py-2 w-full">
-          <div
-            class="
-              p-2
-              text-gray-700
-              dark:text-white
-              font-semibold
-              border-zinc-400 border-b-2
-            "
-          >
-            {{
-              article.name
-                .split("-")
-                .map(
-                  (s) => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()
-                )
-                .join(" ")
-            }}
-          </div>
 
-          <div class="md:flex flex-col items-start justify-between px-2">
+          <div class="md:flex flex-col items-center justify-between px-2 space-y-8">
             <div
-              class="flex flex-col items-start w-full md:w-auto font-semibold"
+              class="flex flex-col items-center w-full md:w-auto font-bold text-lg"
             >
               {{ article.description }}
             </div>
-            <div class="flex flex-col items-start w-full">
+            <span class="text-sm"
+              >Use the "Try It" button or the spacebar key to roll a different
+              result.</span
+            >
+            <div class="flex flex-col items-center space-y-8 mx-auto w-full">
               <div v-for="inputThing in article.args" :key="inputThing.name">
                 <div
                   v-if="inputThing.type === 'text'"
@@ -84,34 +70,20 @@
                 </div>
                 <div
                   v-if="inputThing.type === 'boolean'"
-                  class="flex flex-col items-start space-y-4"
+                  class="flex flex-row items-center space-x-4"
                 >
-                  <label for="someInput">{{ inputThing.description }}</label
-                  ><input
-                    id="someInput"
-                    v-model="input.condit"
-                    @keyup="submitOrNah"
-                    type="checkbox"
-                    class="
-                      border-abyss-1100
-                      dark:bg-abyss-1100 dark:border-nett-maid
-                      border-2
-                      w-full
-                      h-12
-                      rounded-md
-                      p-2
-                    "
-                  />
+                <FormLabel type="checkbox" :friendly-name="inputThing.description" />
+                  <FormCheckbox :caption="inputThing.description" @update = "(x) => input.condit = x" />
                 </div>
               </div>
-              <div class="flex flex-col items-start justify-start">
+              <div class="flex flex-col items-center justify-start">
                 <div
-                  :class="`p-3 ${
+                  :class="`p-3 flex flex-col space-y-8 ${
                     ['string', 'name'].includes(article.name) ? 'break-all' : ''
                   }`"
                 >
-                  Your Result:
-                  <span class="font-bold">{{
+                  <span class = "text-center">Your Result:</span>
+                  <div class="font-bold text-center">{{
                     result
                       ? `${
                           ["name", "character", "fantasy-name"].includes(
@@ -128,12 +100,14 @@
                             : result
                         }`
                       : `Nothing. Just like your life.`
-                  }}</span>
+                  }}</div>
                 </div>
                 <button
                   class="
-                    p-4
-                    bg-zinc-600
+                    py-2 px-4
+                    bg-abyss-800
+                    border-2
+                    border-maid-600
                     text-white
                     rounded-lg
                     transition
@@ -142,6 +116,7 @@
                     transform
                     hover:translate-y-1
                   "
+                  accesskey="32"
                   @click="getResult"
                 >
                   Try it!
@@ -158,8 +133,6 @@
 <script setup>
 import lala from "@nekooftheabyss/lala";
 import articles from "@/data/Features";
-const route = useRoute();
-const nuxtApp = useNuxtApp()
 
 definePageMeta({
   title: "Lala",
@@ -167,9 +140,8 @@ definePageMeta({
     "A collection of random useful (probably) javascript classes and functions.",
 });
 
-const mode = route.params.mode;
-const article = articles.find((x) => x.name === mode);
-if (!article) nuxtApp.$router.push("/");
+const {mode} = defineProps(["mode"]);
+const article = articles.find((x) => x.keyType === mode);
 const input = ref({
   text: null,
   condit: false,
@@ -184,8 +156,8 @@ function submitOrNah(e) {
   if (e.keyCode === 13) return getResult();
 }
 function getResult() {
-  result.value = lala.random[article.keyType]
-    ? lala.random[article.keyType](
+  result.value = lala[article.keyType]
+    ? lala[article.keyType](
         article.name === "fantasy-creature"
           ? true
           : article.args.length !== 0

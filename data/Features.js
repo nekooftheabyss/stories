@@ -1,7 +1,7 @@
 export default [
     {
         name: "string",
-        keyType: "genString",
+        keyType: "generateString",
         description: "Generate a random alphanumeric string.",
         args: [
             {
@@ -13,7 +13,7 @@ export default [
     },
     {
         name: "name",
-        keyType: "genName",
+        keyType: "generateName",
         description: "Generate a random name that can (probably) be pronounced.",
         args: [
             {
@@ -25,7 +25,7 @@ export default [
     },
     {
         name: "email",
-        keyType: "genEmail",
+        keyType: "generateEmail",
         description: "Generate a random email ID (uses the name generator too).",
         args: [
             {
@@ -37,25 +37,25 @@ export default [
     },
     {
         name: "character",
-        keyType: "genCharacter",
+        keyType: "generateCharacter",
         description: "Generate a random weird fantasy character.",
         args: []
     },
     {
         name: "fantasy-name",
-        keyType: "genMonster",
+        keyType: "generateFantasyName",
         description: "Generate a random fantasy name.",
         args: []
     },
     {
         name: "fantasy-creature",
-        keyType: "genRace",
+        keyType: "generateRace",
         description: "Generate a random fantasy race.",
         args: []
     },
     {
         name: "story",
-        keyType: "genStory",
+        keyType: "generateStory",
         description: "Generate a random fantasy story!",
         args: [
             {
@@ -67,7 +67,7 @@ export default [
     },
     {
         name: "chain",
-        keyType: "genChain",
+        keyType: "generateChainMail",
         description: "Generate a random creepy chain mail!",
         args: [
             {

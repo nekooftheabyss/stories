@@ -1,19 +1,20 @@
 import { defineStore } from "pinia";
-import { useStorage } from "@vueuse/core";
+import { useDark, useToggle } from "@vueuse/core";
+
+const isDark = useDark()
+console.log(isDark)
+const toggleDark = useToggle(isDark)
 
 export const useMainConfig = defineStore("main", {
   state() {
     return {
-      isDark: useStorage("dark_mode", true),
+      isDark,
     };
   },
   actions: {
-    switch() {
-      console.log(this.isDark)
-      this.isDark = !this.isDark;
-    },
+    switch: toggleDark,
   },
   getters: {
-    darkMode: (state) => state.isDark,
+    darkMode: (state) => isDark.value,
   },
 });

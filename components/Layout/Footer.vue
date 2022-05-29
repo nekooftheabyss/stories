@@ -35,11 +35,11 @@
             cursor-pointer
             space-x-4
           "
-          @click="mainConfig.switch()"
+          @click="toggleDark"
         >
           <span>Make It {{ isDark ? "Bright" : "Dark" }}</span>
-          <SVGSun v-if="isDark" />
-          <SVGMoon v-else />
+          <SVGSun v-show="isDark" />
+          <SVGMoon v-show="!isDark" />
         </div>
       </div>
       <div class="flex-initial mt-3 sm:mt-0 text-nett-maid">
@@ -63,4 +63,8 @@ import { useMainConfig } from "@/store/mainconfig.js";
 const mainConfig = useMainConfig();
 
 let isDark = computed(() => mainConfig.darkMode);
+function toggleDark() {
+  mainConfig.switch();
+  console.log(mainConfig.darkMode);
+}
 </script>

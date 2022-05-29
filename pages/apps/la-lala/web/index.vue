@@ -33,37 +33,28 @@
               md:space-y-0 md:space-x-4
             "
           >
-            <ul class="flex flex-col items-start w-full px-2 space-y-4 order-2 md:order-1">
-              <li
-                v-for="article in articles"
-                :key="article.name.toLowerCase()"
-                class="p-2 w-full"
-              >
-                <NuxtLink
-                  :to="`/apps/la-lala/web/${article.name.toLowerCase()}`"
-                  class="
-                    p-2
-                    max-w-6xl
-                    md:max-w-md
-                    w-full
-                    block
-                    bg-abyss-1100
-                    text-nett-maid
-                    font-semibold
-                    text-center
-                  "
-                  >{{
-                    article.name
-                      .split("-")
-                      .map(
-                        (s) =>
-                          s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()
-                      )
-                      .join(" ")
-                  }}
-                </NuxtLink>
-              </li>
-            </ul>
+            <div
+              class="
+                flex flex-col
+                items-center
+                w-full
+                p-4
+                space-y-24
+                order-2
+                md:order-1
+              "
+            >
+            <div class = "font-semibold">Choose a function from the dropdown!</div>
+              <FormPicker
+                friendly-name="Lala Features"
+                :choices="
+                  articles.map((x) => [lala.capitalize(x.name), x.keyType])
+                "
+                :chosen = "mode"
+                @update="setMode"
+              />
+              <LalaMode :mode="mode" :key="mode" />
+            </div>
           </div>
           <div class="p-4">
             Lala is a collection of random useful (probably) javascript classes
@@ -72,7 +63,7 @@
             <a
               href="https://github.com/retraigo/lala/blob/main/LICENSE"
               target="_blank"
-              class = "text-nett-maid"
+              class="text-nett-maid"
               >the license</a
             >
             for information about copyright.
@@ -83,36 +74,22 @@
   </div>
 </template>
 <script setup>
+import articles from "@/data/Features";
+import lala from "@nekooftheabyss/lala";
+console.log(lala)
+const enabled = ref(false);
+const mode = ref(articles[0].keyType);
 definePageMeta({
   title: "Lala",
   description:
     "A collection of random useful (probably) javascript classes and functions.",
 });
+
+function formatDate(d) {
+  return new Date(d).toUTCString();
+}
+function setMode(s) {
+  mode.value = s
+}
 </script>
-<script>
-import articles from "@/data/Features";
-export default {
-  data() {
-    return {
-      articles,
-      enabled: false,
-      modez: null,
-    };
-  },
-  methods: {
-    formatDate(d) {
-      return new Date(d).toUTCString();
-    },
-    setEnabled(s) {
-      this.enabled = false;
-      this.modez = s;
-      setTimeout(() => {
-        this.enabled = true;
-      }, 500);
-    },
-    getEnabled() {
-      return this.enabled;
-    },
-  },
-};
-</script>
+

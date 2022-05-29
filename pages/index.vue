@@ -1,7 +1,68 @@
 <template>
-  <div class="flex flex-col space-y-4 w-full">
+  <div class="flex flex-col space-y-96 lg:space-y-108 w-full mt-48 md:mt-72">
+    <!-- HERO -->
+    <div class="flex flex-col space-y-96 lg:space-y-108">
+      <div
+        ref="item1"
+        class="
+          text-4xl
+          lg:text-6xl
+          font-extrabold
+          text-center text-abyss-1100
+          dark:text-maid-100
+        "
+      >
+        Gaze into the abyss.
+      </div>
+      <div
+        ref="item2"
+        class="
+          text-4xl
+          lg:text-6xl
+          font-extrabold
+          text-center text-abyss-1000
+          dark:text-maid-200
+        "
+      >
+        Does the abyss really gaze back at you?
+      </div>
+      <div
+        ref="item3"
+        class="
+          text-4xl
+          lg:text-6xl
+          font-extrabold
+          text-center text-abyss-1100
+          dark:text-maid-100
+        "
+      >
+        It is probably the mysterious cat that resides in it.
+      </div>
+      <div
+        ref="item4"
+        class="
+          w-full
+          flex flex-row
+          justify-between
+          items-center
+          space-x-4
+          opacity-70
+        "
+      >
+        <img
+          src="/eye/Neko_L.webp"
+          class="w-36 md:w-72 lg:w-96 animate-pulse"
+          alt="Right eye of the mysterious neko"
+        />
+        <img
+          src="/eye/Neko_R.webp"
+          class="w-36 md:w-72 lg:w-96 animate-pulse"
+          alt="Left eye of the mysterious neko"
+        />
+      </div>
+    </div>
     <div class="p-8">
-      <div class="text-4xl font-extrabold text-center">
+      <div class="text-4xl lg:text-6xl font-extrabold text-center">
         There are five routes ahead of you.
       </div>
     </div>
@@ -43,4 +104,29 @@
 definePageMeta({
   title: "Home",
 });
+
+/*
+const item1 = ref(null);
+const item2 = ref(null);
+const item3 = ref(null);
+const item4 = ref(null);
+const items = [item1, item2, item3, item4];
+const current = ref(0);
+
+onMounted(() => {
+  nextTick(function () {
+    window.addEventListener("keydown", (event) => {
+      console.log(event.key);
+      if (event.key === " ") {
+        current.value++;
+        if (items[current.value]) {
+          items[current.value].value.scrollIntoView({ behavior: "smooth" });
+          items[current.value].value;
+        }
+        x;
+      }
+    });
+  });
+});
+*/
 </script>
