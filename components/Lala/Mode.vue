@@ -97,7 +97,7 @@
                                     s.slice(1).toLowerCase()
                                 )
                                 .join(" ")
-                            : result
+                            : article.keyType === "generateRace" ? result.description : result
                         }`
                       : `Nothing. Just like your life.`
                   }}</div>
@@ -131,7 +131,7 @@
 </template>
 
 <script setup>
-import lala from "@nekooftheabyss/lala";
+import * as lala from "@nekooftheabyss/lala";
 import articles from "@/data/Features";
 
 definePageMeta({
@@ -158,9 +158,7 @@ function submitOrNah(e) {
 function getResult() {
   result.value = lala[article.keyType]
     ? lala[article.keyType](
-        article.name === "fantasy-creature"
-          ? true
-          : article.args.length !== 0
+        article.args.length !== 0
           ? article.args[0].type === "text"
             ? input.value.text
             : article.args[0].type === "number"

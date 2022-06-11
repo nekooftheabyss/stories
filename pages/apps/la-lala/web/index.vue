@@ -48,7 +48,7 @@
               <FormPicker
                 friendly-name="Lala Features"
                 :choices="
-                  articles.map((x) => [lala.capitalize(x.name), x.keyType])
+                  articles.map((x) => [lala.replace('-', '').capitalize(x.name, true), x.keyType])
                 "
                 :chosen = "mode"
                 @update="setMode"
@@ -75,8 +75,7 @@
 </template>
 <script setup>
 import articles from "@/data/Features";
-import lala from "@nekooftheabyss/lala";
-console.log(lala)
+import * as lala from "@nekooftheabyss/lala";
 const enabled = ref(false);
 const mode = ref(articles[0].keyType);
 definePageMeta({
