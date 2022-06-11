@@ -7,7 +7,7 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^5.0.0",
+    "@nuxtjs/tailwindcss": "^5.1.2",
     "nuxt": "^3.0.0-rc.3"
   },
   "dependencies": {
