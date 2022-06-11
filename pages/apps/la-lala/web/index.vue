@@ -48,7 +48,7 @@
               <FormPicker
                 friendly-name="Lala Features"
                 :choices="
-                  articles.map((x) => [lala.replace('-', '').capitalize(x.name, true), x.keyType])
+                  articles.map((x) => [lala.capitalize(x.name.replace('-', ''), true), x.keyType])
                 "
                 :chosen = "mode"
                 @update="setMode"
