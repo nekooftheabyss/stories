@@ -1,5 +1,10 @@
 export default {
   darkMode: "class", // or 'media' or 'class'
+  content: [
+    './pages/**/*.vue',
+    './components/**/*.vue',
+    './content/**/*.md'
+  ],
   safelist: [
     {
       pattern: /(bg|stroke|fill)-maid-(100|200|300|400|500|600|border)/,

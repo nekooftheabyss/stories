@@ -5,18 +5,8 @@ export default [
     key: `home`,
   },
   {
-    name: `Don't go Home`,
-    route: `/not-home`,
-    key: `not-home`,
-  },
-  {
-    name: `Postulates of the Abyss`,
-    route: `/postulates`,
-    key: `postulates`,
-  },
-  {
-    name: `Blog`,
-    route: `/blog`,
-    key: `blog`,
+    name: `Apostle White`,
+    route: `/stories/apostle-white`,
+    key: `apostle-white`,
   },
 ];

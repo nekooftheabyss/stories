@@ -25,9 +25,10 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "@pinia/nuxt",
-    "@nuxt/content",
+    "@nuxt/content-edge",
   ],
   content: {
+    documentDriven: true,
     navigation: {
       fields: ["navTitle"],
     },

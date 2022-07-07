@@ -1,7 +1,7 @@
 <template>
   <div class="p-2">
     <div class="flex flex-col space-y-4 items-start">
-      <div class="text-2xl font-bold">Table Of Contents</div>
+      <div class="text-2xl font-bold">Contents</div>
       <ul class="px-2 space-y-4 list-disc text-sm">
         <li v-for="item in content" :key="item.id" class = "space-y-4">
           <a :href="`#${item.id}`" class = "text-zinc-800 dark:text-maid-300">{{ item.text }}</a>

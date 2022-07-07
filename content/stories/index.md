@@ -1,0 +1,1 @@
+I randomly write stories when I'm bored.
