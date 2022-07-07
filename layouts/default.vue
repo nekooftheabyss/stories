@@ -47,7 +47,6 @@
         ></noscript
       >
     </div>
-    <LayoutPreFooter />
     <LayoutFooter />
   </div>
 </template>
