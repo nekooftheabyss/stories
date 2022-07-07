@@ -10,7 +10,6 @@
           .reverse()"
         :key="article._path"
         class = "md:flex justify-between items-center"
-        @mousedown="() => pleaseLog(posts)"
       >
         <NuxtLink :to="article._path" class="p-4 transition duration-500 ease-in-out transform hover:translate-y-1 hover:scale-110">
           <h2 class="text-3xl font-bold">{{ article.title }}</h2>
@@ -23,9 +22,11 @@
   </div>
 </template>
 <script setup>
-function pleaseLog(x) {
-  console.log(x);
-}
 const posts = await queryContent("stories").find();
 console.log(posts);
+definePageMeta({
+  title: "Stories - Neko Of The Abyss",
+  description: "Read stories."
+})
+
 </script>
